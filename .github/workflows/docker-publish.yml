@@ -28,7 +28,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Run tests
-        run: docker build ./new-helm/Development/ --file ./new-helm/Development/Dockerfile.nginx.dev
+        run: docker build ./nginx-k8s/ --file ./nginx-k8s/Dockerfile
 
   # Push image to GitHub Packages.
   # See also https://docs.docker.com/docker-hub/builds/
@@ -48,7 +48,7 @@ jobs:
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
 
       - name: Build image
-        run: docker build ./new-helm/Development/ --file ./new-helm/Development/Dockerfile.nginx.dev --tag $IMAGE_NAME
+        run: docker build ./nginx-k8s/ --file ./nginx-k8s/Dockerfile --tag $IMAGE_NAME
 
       - name: Push image
         run: |
