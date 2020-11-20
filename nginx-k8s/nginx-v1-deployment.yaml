@@ -19,7 +19,7 @@ spec:
       containers:
       - name: nginx-pod
         imagePullPolicy: Always
-        image: skydefender/argocd-nginx-test:v1
+        image: skydefender/argocd-nginx-test:v2
         ports:
         - containerPort: 80
         resources:
