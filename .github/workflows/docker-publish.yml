@@ -57,7 +57,7 @@ jobs:
           IMAGE_ID=docker.io/$IMAGE_REPO/$IMAGE_NAME
 
           # Image version
-          VERSION=v2
+          VERSION=v1
 
           # Change all uppercase to lowercase
           IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
