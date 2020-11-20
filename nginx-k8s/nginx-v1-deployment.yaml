@@ -18,6 +18,7 @@ spec:
     spec:
       containers:
       - name: nginx-pod
+        pullPolicy: Always
         image: skydefender/argocd-nginx-test:latest
         ports:
         - containerPort: 80
